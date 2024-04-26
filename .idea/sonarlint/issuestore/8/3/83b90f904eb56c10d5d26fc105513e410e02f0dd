@@ -1,0 +1,8 @@
+
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¦˜Ó”øÿÿÿÿJ$5cfbb994-471d-461b-9456-4ac908bee9a1
+Ž	java:S116"SRename this field "Discount" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯õœùJ$d5ff3974-1ed6-41c2-8065-d883f0b07a42
+w
+java:S1128";Remove this unused import 'org.hibernate.annotations.Type'.(ý®™ÊJ$c6bebae0-98a9-4f91-80d6-33f8d135a68c
+j
+java:S1128
+".Remove this unused import 'javax.persistence'.(¬£þçJ$d262920d-9550-4ca0-865c-b7f7ce71e239

@@ -1,0 +1,7 @@
+{
+  "timestamp": "2024-04-17T02:14:30.092+00:00",
+  "status": 401,
+  "error": "Unauthorized",
+  "message": "",
+  "path": "/admin/productcar/delete-multiple-products"
+}

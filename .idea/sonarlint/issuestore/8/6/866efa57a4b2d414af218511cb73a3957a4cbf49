@@ -1,0 +1,8 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¦˜Ó”øÿÿÿÿ8ÓåÿÚî1J$ba78b74f-6292-4e7e-944e-5dacaf6b47be
+Š
+java:S1128"BRemove this unused import 'com.example.demo.model.entity.Product'.(ó‹…©ûÿÿÿÿ8Âí„Ûî1J$bf46d847-e4b4-499f-916e-3f84d1d03ed8
+•
+java:S1128"MRemove this unused import 'com.example.demo.model.entity.ShoppingCartDetail'.(¬³Ã»ûÿÿÿÿ8Âí„Ûî1J$7b21cb76-8b55-43b3-a31e-a18a0e88e81c
+p
+java:S1128"(Remove this unused import 'lombok.Data'.(÷í«ÿÿÿÿÿ8Âí„Ûî1J$87c3c0d5-3acb-4955-a6fb-3406d0695d07

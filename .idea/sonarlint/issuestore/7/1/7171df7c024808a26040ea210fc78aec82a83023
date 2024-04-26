@@ -1,0 +1,27 @@
+
+w	java:S125"<This block of commented-out lines of code should be removed.(à‹’±J$47ff9935-d6ce-4579-9027-e0f664fa30ea
+~
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$65396e8f-d371-44b5-be2f-3f2d9b5dbf44
+~
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$98b38125-b39a-4881-9f3c-eb9bef2185b3
+~
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$d98a0a5d-81f4-49ad-9655-050c2f23a1aa
+~
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$7b9b742a-40fe-499c-8c5f-fa7a25f62bb7
+~
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$05824a58-031e-4455-9247-02a74fbb6cbf
+~
+java:S6813!"BRemove this field injection and use constructor injection instead.(êæÄŞJ$76a62ec2-73d9-4768-9362-f4be323c3275
+~
+java:S6813#"BRemove this field injection and use constructor injection instead.(êæÄŞJ$7525be1d-79e4-45f4-af88-ee9f140be022
+w	java:S125 "<This block of commented-out lines of code should be removed.(©Ö£J$341c841a-cbee-4c81-9a61-37466653ac7c
+|	java:S125/"<This block of commented-out lines of code should be removed.(³Ø±·üÿÿÿÿJ$1adb426f-afa0-4cce-aa1d-236bb14a9b57
+r
+java:S6437A"6Revoke and change this password, as it is compromised.(İ«†J$4a3f8376-a58b-4f73-b698-842c4d1dc712
+‰	java:S100O"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê­ú½J$965f8cf4-62a2-4101-9795-cd41a2dc2f56
+€
+java:S1128"DRemove this unused import 'com.example.demo.Util.PasswordGenerator'.(éïúJ$310c228f-34ac-4281-8ddf-58b975aa5652
+m
+java:S1144I",Remove this unused private "addType" method.(¨çíùÿÿÿÿJ$5756cdca-f583-44fa-b448-fec7066aeca9
+h
+java:S1144O",Remove this unused private "AddRole" method.(ê­ú½J$a3814eec-50f9-499e-aec2-709b698158a3

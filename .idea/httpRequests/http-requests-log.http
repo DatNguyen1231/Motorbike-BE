@@ -1,0 +1,105 @@
+GET http://localhost:8080/reviews/get/1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-04-21T201051.200.json
+
+###
+
+DELETE http://localhost:8080/admin/productcar/delete-multiple-products
+Content-Type: application/json
+Content-Length: 7
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+[
+  0
+]
+
+<> 2024-04-21T201051-1.401.json
+
+###
+
+POST http://localhost:8080/add
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-04-21T201051.401.json
+
+###
+
+POST http://localhost:8080/add
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-04-21T201050.401.json
+
+###
+
+GET http://localhost:8080/reviews/get/1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-04-21T201041.200.json
+
+###
+
+POST http://localhost:8080/add
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-04-21T201015.401.json
+
+###
+
+GET http://localhost:8080/test
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-04-21T201006.401.json
+
+###
+
+GET http://localhost:8080/test
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-04-21T110543.404.json
+
+###
+
+DELETE http://localhost:8080/admin/productcar/delete-multiple-products
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-04-17T091430.401.json
+
+###
+
+POST http://localhost:8080/add
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-04-13T142222.400.json
+
+###
+

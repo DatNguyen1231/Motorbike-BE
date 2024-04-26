@@ -1,0 +1,298 @@
+Index: src/main/java/com/example/demo/controller/ProductController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.demo.controller;\r\n\r\nimport com.example.demo.model.Dto.ProductDto;\r\nimport com.example.demo.service.ProductService;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.http.ResponseEntity;\r\nimport org.springframework.web.bind.annotation.*;\r\n\r\n//@RequestMapping(\"/admin/productcar\")\r\n@RestController\r\npublic class ProductController {\r\n    @Autowired\r\n    ProductService productService;\r\n\r\n    @PostMapping(\"/admin/productcar/add\")\r\n    public ResponseEntity<?> addProduct(@RequestBody ProductDto productDto){\r\n        return productService.add(productDto);\r\n    }\r\n\r\n    @GetMapping(\"/productcar/getall/{page}/{size}\")\r\n    public ResponseEntity<?> getAllProductCar(@PathVariable int page,@PathVariable int size){\r\n        return productService.get(page,size);\r\n    }\r\n\r\n    @DeleteMapping(\"/admin/productcar/delete/{id}\")\r\n    public ResponseEntity<?> delete(@PathVariable long id) {\r\n        return productService.delete(id);\r\n    }\r\n    @PutMapping(\"/admin/productcar/put/{id}\")\r\n    public ResponseEntity<?> put(@PathVariable long id,@RequestBody ProductDto productDto) {\r\n        return productService.put(id,productDto);\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/demo/controller/ProductController.java b/src/main/java/com/example/demo/controller/ProductController.java
+--- a/src/main/java/com/example/demo/controller/ProductController.java	(revision ff320c7cc74ce1860b31fe89947205fcd316f071)
++++ b/src/main/java/com/example/demo/controller/ProductController.java	(date 1710841475571)
+@@ -26,9 +26,4 @@
+     public ResponseEntity<?> delete(@PathVariable long id) {
+         return productService.delete(id);
+     }
+-    @PutMapping("/admin/productcar/put/{id}")
+-    public ResponseEntity<?> put(@PathVariable long id,@RequestBody ProductDto productDto) {
+-        return productService.put(id,productDto);
+-    }
+-
+ }
+Index: src/main/java/com/example/demo/model/entity/Reviews.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.demo.model.entity;\r\n\r\nimport lombok.Data;\r\n\r\nimport javax.persistence.*;\r\n\r\n@Entity\r\n@Table(name = \"Reviews\")\r\n@Data\r\npublic class Reviews {\r\n    @Id\r\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\r\n    private Long id;\r\n\r\n\r\n    private int Rating;\r\n    private String Comment;\r\n    private String dateReview;\r\n\r\n    @ManyToOne\r\n    @JoinColumn(name = \"id_Product\", nullable = false)\r\n    private Product product;\r\n\r\n    @ManyToOne\r\n    @JoinColumn(name = \"id_User\", nullable = false)\r\n    private DAOUser user;\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/demo/model/entity/Reviews.java b/src/main/java/com/example/demo/model/entity/Reviews.java
+--- a/src/main/java/com/example/demo/model/entity/Reviews.java	(revision ff320c7cc74ce1860b31fe89947205fcd316f071)
++++ b/src/main/java/com/example/demo/model/entity/Reviews.java	(date 1710841274313)
+@@ -1,4 +1,4 @@
+-package com.example.demo.model.entity;
++package com.example.demo.entity;
+ 
+ import lombok.Data;
+ 
+@@ -12,11 +12,6 @@
+     @GeneratedValue(strategy = GenerationType.IDENTITY)
+     private Long id;
+ 
+-
+-    private int Rating;
+-    private String Comment;
+-    private String dateReview;
+-
+     @ManyToOne
+     @JoinColumn(name = "id_Product", nullable = false)
+     private Product product;
+@@ -25,5 +20,7 @@
+     @JoinColumn(name = "id_User", nullable = false)
+     private DAOUser user;
+ 
+-
++    private int Rating;
++    private String Comment;
++    private String dateReview;
+ }
+Index: src/main/java/com/example/demo/model/Dto/ProductDto.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.demo.model.Dto;\r\n\r\nimport com.example.demo.model.entity.Img;\r\nimport lombok.Data;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\n\r\n@Data\r\npublic class ProductDto {\r\n\r\n   // private Long id;\r\n    private String name;\r\n    private long price;\r\n    private long quantity;\r\n    private int detailType;\r\n    private long idTypeProduct;\r\n    private long idDescribeProduct;\r\n    private int Discount;\r\n    private String describe;\r\n    private List<Img> images = new ArrayList<>();\r\n\r\n   \r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/demo/model/Dto/ProductDto.java b/src/main/java/com/example/demo/model/Dto/ProductDto.java
+--- a/src/main/java/com/example/demo/model/Dto/ProductDto.java	(revision ff320c7cc74ce1860b31fe89947205fcd316f071)
++++ b/src/main/java/com/example/demo/model/Dto/ProductDto.java	(date 1710841270369)
+@@ -1,6 +1,7 @@
+-package com.example.demo.model.Dto;
++package com.example.demo.Dto;
+ 
+-import com.example.demo.model.entity.Img;
++import com.example.demo.entity.Img;
++import com.example.demo.entity.Product;
+ import lombok.Data;
+ 
+ import java.util.ArrayList;
+@@ -9,15 +10,14 @@
+ @Data
+ public class ProductDto {
+ 
+-   // private Long id;
++    private Long id;
+     private String name;
+     private long price;
+     private long quantity;
+-    private int detailType;
++    private int discount;
+     private long idTypeProduct;
+     private long idDescribeProduct;
+-    private int Discount;
+-    private String describe;
++    private int sale;
+     private List<Img> images = new ArrayList<>();
+ 
+    
+Index: src/main/java/com/example/demo/repositories/DescribeProductRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/demo/repositories/DescribeProductRepository.java b/src/main/java/com/example/demo/repositories/DescribeProductRepository.java
+new file mode 100644
+--- /dev/null	(date 1710840184956)
++++ b/src/main/java/com/example/demo/repositories/DescribeProductRepository.java	(date 1710840184956)
+@@ -0,0 +1,12 @@
++package com.example.demo.repositories;
++
++import com.example.demo.entity.DescribeProduct;
++import org.springframework.data.jpa.repository.JpaRepository;
++import org.springframework.stereotype.Repository;
++
++
++@Repository
++public interface DescribeProductRepository extends JpaRepository<DescribeProduct,Long> {
++    DescribeProduct findByDescribe(String describe);
++    Boolean existsByDescribe(String describe);
++}
+Index: src/main/java/com/example/demo/controller/DescribeProductController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/demo/controller/DescribeProductController.java b/src/main/java/com/example/demo/controller/DescribeProductController.java
+new file mode 100644
+--- /dev/null	(date 1710840184949)
++++ b/src/main/java/com/example/demo/controller/DescribeProductController.java	(date 1710840184949)
+@@ -0,0 +1,32 @@
++package com.example.demo.controller;
++
++import com.example.demo.Dto.ShoppingCartDto;
++import com.example.demo.entity.DescribeProduct;
++import com.example.demo.service.DescribeProductSevice;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.http.ResponseEntity;
++import org.springframework.web.bind.annotation.*;
++
++@RequestMapping("/admin/describe")
++@RestController
++public class DescribeProductController {
++
++    @Autowired
++    DescribeProductSevice describeProductSevice;
++
++
++    @PostMapping("/add")
++
++    public ResponseEntity<?> addTypeProduct(@RequestBody DescribeProduct describeProduct) {
++        return describeProductSevice.add(describeProduct);
++    }
++    @GetMapping("/get")
++
++    public ResponseEntity<?> get() {
++        return describeProductSevice.get();
++    }
++    @DeleteMapping("/delete/{id}")
++    public ResponseEntity<?> delete(@PathVariable long id) {
++        return describeProductSevice.delete(id);
++    }
++}
+Index: src/main/java/com/example/demo/service/DescribeProductSevice.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/demo/service/DescribeProductSevice.java b/src/main/java/com/example/demo/service/DescribeProductSevice.java
+new file mode 100644
+--- /dev/null	(date 1710840184960)
++++ b/src/main/java/com/example/demo/service/DescribeProductSevice.java	(date 1710840184960)
+@@ -0,0 +1,12 @@
++package com.example.demo.service;
++
++import com.example.demo.entity.DescribeProduct;
++import com.example.demo.entity.Product;
++import org.springframework.http.ResponseEntity;
++
++public interface DescribeProductSevice {
++    ResponseEntity<?> add(DescribeProduct describeProduct);
++    ResponseEntity<?> delete(long id);
++
++    ResponseEntity<?> get();
++}
+Index: src/main/java/com/example/demo/DemoApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.demo;\r\n\r\n//import com.example.demo.entity.*;\r\n\r\nimport com.example.demo.model.entity.Role;\r\nimport com.example.demo.model.entity.ShoppingCartDetail;\r\nimport com.example.demo.model.entity.TypeProduct;\r\nimport com.example.demo.repositories.*;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.boot.SpringApplication;\r\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\r\nimport org.springframework.boot.context.event.ApplicationReadyEvent;\r\nimport org.springframework.context.event.EventListener;\r\n\r\n@SpringBootApplication\r\npublic class DemoApplication {\r\n    @Autowired\r\n    RoleRepository roleRepository;\r\n\r\n    @Autowired\r\n    TypeProducRepository typeProductRepository;\r\n    @Autowired\r\n    StatusShoppingCartRepository statusRepository;\r\n    @Autowired\r\n    ProductRepository repository;\r\n    public static void main(String[] args) {\r\n        SpringApplication.run(DemoApplication.class, args);\r\n    }\r\n\r\n\r\n    //thêm dữ liệu test\r\n    //thêm 1 lần r tắt\r\n    @EventListener(ApplicationReadyEvent.class)\r\n    public void onApplicationReady() {\r\n\r\n   //phải thêm dầu tiên người dùng k tự thêm được\r\n        System.out.println(\"hihi\");\r\n        AddRole(\"ADMIN\");\r\n        AddRole(\"USER\");\r\n       System.out.println(\"Đã thêm role \");\r\n\r\n\r\n        //trường này người dùng tự thêm\r\n        addType(\"xe may1 \");\r\n        addType(\"Phu 1 \");\r\n        addType(\"PhỤ Kiện1 \");\r\n        System.out.println(\"Đã thêm type product \");\r\n\r\n\r\n\r\n\r\n    }\r\n\r\n    private void addType(String type) {\r\n        TypeProduct typeProduct = new TypeProduct();\r\n        typeProduct.setNameType(type);\r\n        typeProductRepository.save(typeProduct);\r\n    }\r\n\r\n    private void AddRole(String role) {\r\n        Role addRole = new Role();\r\n        addRole.setRole(role);\r\n        roleRepository.save(addRole);\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/demo/DemoApplication.java b/src/main/java/com/example/demo/DemoApplication.java
+--- a/src/main/java/com/example/demo/DemoApplication.java	(revision ff320c7cc74ce1860b31fe89947205fcd316f071)
++++ b/src/main/java/com/example/demo/DemoApplication.java	(date 1710841835308)
+@@ -12,11 +12,14 @@
+ import org.springframework.boot.context.event.ApplicationReadyEvent;
+ import org.springframework.context.event.EventListener;
+ 
++import java.util.List;
++
+ @SpringBootApplication
+ public class DemoApplication {
+     @Autowired
+     RoleRepository roleRepository;
+-
++    @Autowired
++    DescribeProductRepository describeRepository;
+     @Autowired
+     TypeProducRepository typeProductRepository;
+     @Autowired
+@@ -56,12 +59,9 @@
+         typeProduct.setNameType(type);
+         typeProductRepository.save(typeProduct);
+     }
+-
+-    private void AddRole(String role) {
+-        Role addRole = new Role();
++    private void AddRole(String role){
++        Role addRole =new Role();
+         addRole.setRole(role);
+         roleRepository.save(addRole);
+     }
+-
+-
+ }
+Index: src/main/java/com/example/demo/service/serviceImpl/DescribeProductImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/demo/service/serviceImpl/DescribeProductImpl.java b/src/main/java/com/example/demo/service/serviceImpl/DescribeProductImpl.java
+new file mode 100644
+--- /dev/null	(date 1710840184962)
++++ b/src/main/java/com/example/demo/service/serviceImpl/DescribeProductImpl.java	(date 1710840184962)
+@@ -0,0 +1,46 @@
++package com.example.demo.service.serviceImpl;
++
++import com.example.demo.Dto.Messenger;
++import com.example.demo.entity.DescribeProduct;
++import com.example.demo.repositories.DescribeProductRepository;
++import com.example.demo.service.DescribeProductSevice;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.http.HttpStatus;
++import org.springframework.http.ResponseEntity;
++import org.springframework.stereotype.Service;
++
++@Service
++public class DescribeProductImpl implements DescribeProductSevice {
++    @Autowired
++    DescribeProductRepository productRepository;
++    @Autowired
++    Messenger messenger;
++    @Override
++    public ResponseEntity<?> add(DescribeProduct describeProduct) {
++        // Kiểm tra xem TypeProductCar với cùng một tên đã tồn tại chưa
++        if ( productRepository.existsByDescribe(describeProduct.getDescribe())  ) {
++            messenger.setMessenger("DescribeProductal ready exists.");
++            return new ResponseEntity<>(messenger, HttpStatus.CONFLICT);
++        }
++        productRepository.save(describeProduct);
++        messenger.setMessenger(" add DescribeProduct successfully.");
++
++        return new ResponseEntity<>(messenger, HttpStatus.OK);
++    }
++
++    @Override
++    public ResponseEntity<?> delete(long id) {
++        if (productRepository.existsById(id)) {
++            productRepository.deleteById(id);
++            messenger.setMessenger("delete successfully");
++            return new ResponseEntity<>(messenger, HttpStatus.OK);
++        }
++        messenger.setMessenger("empty");
++        return new ResponseEntity<>(messenger, HttpStatus.NOT_FOUND);
++    }
++
++    @Override
++    public ResponseEntity<?> get() {
++        return new ResponseEntity<>(productRepository.findAll(), HttpStatus.OK);
++    }
++}
+Index: src/main/java/com/example/demo/config/JwtRequestFilter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.demo.config;\r\n\r\nimport java.io.IOException;\r\n\r\nimport javax.servlet.FilterChain;\r\nimport javax.servlet.ServletException;\r\nimport javax.servlet.http.HttpServletRequest;\r\nimport javax.servlet.http.HttpServletResponse;\r\n\r\nimport com.example.demo.service.serviceImpl.JwtUserDetailsService;\r\nimport io.jsonwebtoken.SignatureException;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.security.authentication.UsernamePasswordAuthenticationToken;\r\nimport org.springframework.security.core.context.SecurityContextHolder;\r\nimport org.springframework.security.core.userdetails.UserDetails;\r\nimport org.springframework.security.web.authentication.WebAuthenticationDetailsSource;\r\nimport org.springframework.stereotype.Component;\r\nimport org.springframework.web.filter.OncePerRequestFilter;\r\n\r\n\r\nimport io.jsonwebtoken.ExpiredJwtException;\r\n\r\n/*\r\nThe JwtRequestFilter extends the Spring Web Filter OncePerRequestFilter class. For any incoming request this Filter\r\nclass gets executed. It checks if the request has a valid JWT token. If it has a valid JWT Token then it sets the\r\n Authentication in the context, to specify that the current user is authenticated.\r\n */\r\n\r\n@Component\r\npublic class JwtRequestFilter extends OncePerRequestFilter {\r\n\r\n    @Autowired\r\n    private JwtUserDetailsService jwtUserDetailsService;\r\n\r\n    @Autowired\r\n    private JwtTokenUtil jwtTokenUtil;\r\n\r\n    @Override\r\n    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)\r\n            throws ServletException, IOException {\r\n\r\n        final String requestTokenHeader = request.getHeader(\"Authorization\");\r\n\r\n        String username = null;\r\n        String jwtToken = null;\r\n        // JWT Token is in the form \"Bearer token\". Remove Bearer word and get\r\n        // only the Token\r\n        if (requestTokenHeader != null && requestTokenHeader.startsWith(\"Bearer \")) {\r\n            jwtToken = requestTokenHeader.substring(7);\r\n            try {\r\n                username = jwtTokenUtil.getUsernameFromToken(jwtToken);\r\n                //System.out.println(username);\r\n            } catch (IllegalArgumentException e) {\r\n                System.out.println(\"Unable to get JWT Token\");\r\n            } catch (ExpiredJwtException e) {\r\n                System.out.println(\"JWT Token has expired\");\r\n            }\r\n            catch (SignatureException e) {\r\n                System.out.println(\"Invalid JWT Token signature\");\r\n            }\r\n            catch (Exception e){\r\n                System.out.println(\"Erros\");\r\n            }\r\n        } else {\r\n            logger.warn(\"JWT Token does not begin with Bearer String\");\r\n        }\r\n\r\n        // Once we get the token validate it.\r\n        if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {\r\n\r\n            UserDetails userDetails = this.jwtUserDetailsService.loadUserByUsername(username);\r\n\r\n            // if token is valid configure Spring Security to manually set\r\n            // authentication\r\n            if (jwtTokenUtil.validateToken(jwtToken, userDetails)) {\r\n\r\n                UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(\r\n                        userDetails, null, userDetails.getAuthorities());\r\n                usernamePasswordAuthenticationToken\r\n                        .setDetails(new WebAuthenticationDetailsSource().buildDetails(request));\r\n                // After setting the Authentication in the context, we specify\r\n                // that the current user is authenticated. So it passes the\r\n                // Spring Security Configurations successfully.\r\n                SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);\r\n            }\r\n\r\n        }\r\n        chain.doFilter(request, response);\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/demo/config/JwtRequestFilter.java b/src/main/java/com/example/demo/config/JwtRequestFilter.java
+--- a/src/main/java/com/example/demo/config/JwtRequestFilter.java	(revision ff320c7cc74ce1860b31fe89947205fcd316f071)
++++ b/src/main/java/com/example/demo/config/JwtRequestFilter.java	(date 1710840184948)
+@@ -62,7 +62,7 @@
+                 System.out.println("Erros");
+             }
+         } else {
+-            logger.warn("JWT Token does not begin with Bearer String");
++   //         logger.warn("JWT Token does not begin with Bearer String");
+         }
+ 
+         // Once we get the token validate it.

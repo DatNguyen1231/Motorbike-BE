@@ -1,0 +1,14 @@
+
+	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÜÇÁ´ùÿÿÿÿJ$a2818f2a-c365-492d-9893-faf37718c89a
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¦˜Ó”øÿÿÿÿJ$9eed7324-3cd0-4279-a225-129e71aac68a
+Œ	java:S116"QRename this field "ApiKey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡‹Ù¿J$af026cfc-8cfc-47e4-9492-b1d0cfb5050f
+Œ	java:S116"RRename this field "Content" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Çî—J$eab10b9c-9adc-452f-8af7-a799b0fcd8b4
+	java:S116"PRename this field "Phone" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¹È§üÿÿÿÿJ$ed3d5b92-a8ca-4a50-944b-d4933f6e4882
+	java:S116"TRename this field "SecretKey" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èîªJ$3bf78d0a-646c-467b-94cb-c2368deebab5
+	java:S116"RRename this field "SmsType" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó¢÷…J$3d379a82-db27-4b0a-ba6b-0d67fbf15635
+	java:S116"TRename this field "Brandname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş­ıJ$0cba19a2-9630-4879-a19f-80697fe7f362
+	java:S116"RRename this field "Sandbox" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’İàÅJ$447fb16b-3f11-4332-ba42-fe435eccf273
+v
+java:S1128"5Remove this unused import 'javax.persistence.Entity'.(úƒßıûÿÿÿÿJ$dfeab9b3-7cab-4fb0-b0ce-4061c463c1dc
+u
+java:S1128"4Remove this unused import 'javax.persistence.Table'.(˜øŒ“øÿÿÿÿJ$25399392-ae9f-4a8a-9113-cc5f0470fe79

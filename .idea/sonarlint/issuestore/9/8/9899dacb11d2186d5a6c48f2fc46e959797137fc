@@ -1,0 +1,16 @@
+
+¾
+java:S1128"{Remove this unused import 'org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity'.(Ô¦ø8úÏ“úğ1J$fd99d443-e2cd-4aff-8382-8525c7aebe71
+·
+java:S1128
+"oRemove this unused import 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity'.(ŸÜÑıÿÿÿÿ8ûÏ“úğ1J$c9868fc7-a85a-450c-bd88-b620bbae80da
+
+java:S1128"KRemove this unused import 'org.springframework.web.cors.CorsConfiguration'.(î¤·`8ûÏ“úğ1J$7dc0cdb1-96b7-4ebb-849a-7dfed0131125
+¡
+java:S1128"YRemove this unused import 'org.springframework.web.cors.UrlBasedCorsConfigurationSource'.(µ²İûùÿÿÿÿ8ûÏ“úğ1J$f3969272-44fb-4e38-b4c2-9c8281bc9c63
+£
+java:S1128"[Remove this unused import 'org.springframework.web.servlet.config.annotation.CorsRegistry'.(âÁ’©şÿÿÿÿ8ûÏ“úğ1J$3d2e946a-fc6d-4a64-b5b5-2301b55c0ecd
+§
+java:S1128"_Remove this unused import 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer'.(’µ¥Êÿÿÿÿÿ8ûÏ“úğ1J$abcbd089-604a-4379-af0e-602a54e4b353
+
+java:S1128"FRemove this unused import 'org.springframework.web.filter.CorsFilter'.(¨­ŸØøÿÿÿÿ8ûÏ“úğ1J$4eb02c8f-afb0-4ee9-93ee-ed5c3a104c03

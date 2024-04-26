@@ -1,0 +1,12 @@
+
+µ
+java:S1192b"mDefine a constant instead of duplicating this literal "Error while getting partial product list: {}" 4 times.(«‡ãÍúÿÿÿÿ8‚›Ášñ1J$b08d2cce-b87c-4804-82eb-59d59c111e19
+À
+java:S1192^"xDefine a constant instead of duplicating this literal "Retrieved partial product list from page {}: successful" 5 times.(üí«ìûÿÿÿÿ8ƒ›Ášñ1J$05a7d319-e8a9-4f05-a63d-76d8007e23fb
+™	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢—şÂøÿÿÿÿ8„›Ášñ1J$aed83eae-4745-4048-9aa1-b1dc091cd07d
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Œ›Û»8‰›Ášñ1J$f7c9eeb6-170c-47c1-9105-ceb7aa96ea20
+„
+java:S1854ş";Remove this useless assignment to local variable "message".(à€Ê³ùÿÿÿÿ8©œÁšñ1J$0c48c6dc-27b1-48a8-97e8-8e4f76565615
+u
+java:S1481ş",Remove this unused "message" local variable.(à€Ê³ùÿÿÿÿ8«œÁšñ1J$294276a4-a29f-427d-b309-75442d900955
+„	java:S125"<This block of commented-out lines of code should be removed.(‚ª«åûÿÿÿÿ8­œÁšñ1J$d35e77b8-d7e8-4348-8ea4-0e76b9403a8b

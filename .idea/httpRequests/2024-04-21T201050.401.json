@@ -1,0 +1,7 @@
+{
+  "timestamp": "2024-04-21T13:10:50.986+00:00",
+  "status": 401,
+  "error": "Unauthorized",
+  "message": "",
+  "path": "/add"
+}

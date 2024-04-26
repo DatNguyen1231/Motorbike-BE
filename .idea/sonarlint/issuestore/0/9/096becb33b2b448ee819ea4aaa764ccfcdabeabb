@@ -1,0 +1,8 @@
+
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¦˜Ó”øÿÿÿÿJ$33374019-6ef4-4096-9ac7-1dee54a1022e
+•	java:S116"URename this field "id_product" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æƒ ®øÿÿÿÿJ$55ef32db-b6a8-494f-b43f-d0b8c3a058d3
+’	java:S116"RRename this field "id_user" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í†šöşÿÿÿÿJ$4bf80384-6878-44f9-911b-051e341b83f2
+ƒ
+java:S1128"BRemove this unused import 'com.example.demo.model.entity.Product'.(ó‹…©ûÿÿÿÿJ$08a65625-d0a1-4776-b816-a49bff5afa6c
+i
+java:S1128"(Remove this unused import 'lombok.Data'.(÷í«ÿÿÿÿÿJ$e5a09447-a5d9-44fb-815d-51678576653f
