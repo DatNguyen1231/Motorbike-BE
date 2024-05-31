@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="534f43b9-044d-4b4c-b196-932716482ed7" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" afterDir="false" />
-    </list>
+    <list default="true" id="534f43b9-044d-4b4c-b196-932716482ed7" name="Changes" comment="update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,6 +119,7 @@
       <recent name="com.example.demo.model.Dto" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kcost\OneDrive\Máy tính\Motorbike-BE\target" />
       <recent name="C:\Users\kcost\OneDrive\Máy tính\CGDN-SpringBoot-JWT-MySql-master\src\main\resources" />
       <recent name="C:\Users\kcost\OneDrive\Máy tính\CGDN-SpringBoot-JWT-MySql-master\src\main\resources\templates" />
     </key>
