@@ -15,9 +15,9 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
         <java.version>1.8</java.version>
     </properties>
 
@@ -100,11 +100,12 @@
     <build>
         <plugins>
             <plugin>
-            <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.2.0</version> <!-- hoặc phiên bản mới nhất -->
             </plugin>
         </plugins>
-
     </build>
+
 
 </project>
