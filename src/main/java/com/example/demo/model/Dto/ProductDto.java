@@ -9,7 +9,7 @@ import java.util.List;
 @Data
 public class ProductDto {
     private String name;
-    private long price;
+    private double price;
     private long quantity;
     private Long detailType;
     private long idTypeProduct;

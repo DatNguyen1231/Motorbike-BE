@@ -6,7 +6,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
-
 @Slf4j
 @RestController
 @RequestMapping("/otp")
@@ -19,12 +18,12 @@ public class OTPController {
     }
 
     @PostMapping("/otp")
-    public ResponseEntity<?> email(@RequestParam("email") String email){
+    public ResponseEntity<?> email(@RequestParam("email") String email) {
         return otpService.sendOTP(email);
     }
 
     @PostMapping("/reset-password")
-    public ResponseEntity<?> resetPass(@RequestParam("email") String email, @RequestParam("otp") String otp)  {
+    public ResponseEntity<?> resetPass(@RequestParam("email") String email, @RequestParam("otp") String otp) {
         return otpService.resetPassword(email, otp);
     }
 }

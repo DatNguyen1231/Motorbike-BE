@@ -8,6 +8,6 @@ public class MaintenanceTask {
 
     @Scheduled(fixedRate = 10000) // 1 day in milliseconds; 1000ms=1s
     public void performMaintenance() {
-      System.out.println("bao tri");
+        System.out.println("bao tri");
     }
 }

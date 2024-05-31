@@ -2,10 +2,9 @@ package com.example.demo.service.serviceImpl;
 
 import com.example.demo.constants.ConstantsProduct;
 import com.example.demo.model.Dto.*;
-import com.example.demo.model.entity.Img;
 import com.example.demo.model.entity.Product;
 import com.example.demo.repositories.ProductRepository;
-import com.example.demo.repositories.TypeProducRepository;
+import com.example.demo.repositories.TypeProductRepository;
 import com.example.demo.service.ProductService;
 
 import org.apache.commons.lang3.ObjectUtils;
@@ -32,17 +31,16 @@ public class ProductImpl implements ProductService {
 
     private final ProductRepository productRepository;
 
-    private final TypeProducRepository typeProductRepository;
+    private final TypeProductRepository typeProductRepository;
 
-    public ProductImpl(Messenger messenger, ProductRepository productRepository, TypeProducRepository typeProductRepository) {
+    public ProductImpl(Messenger messenger, ProductRepository productRepository, TypeProductRepository typeProductRepository) {
         this.messenger = messenger;
         this.productRepository = productRepository;
         this.typeProductRepository = typeProductRepository;
     }
 
     @Override
-    public ResponseEntity<?> add(ProductDto dto) {
-
+    public ResponseEntity<?> addProduct(ProductDto dto) {
         try {
             Product product = new Product();
             product.setName(dto.getName());
@@ -54,12 +52,11 @@ public class ProductImpl implements ProductService {
             product.setDescribe(dto.getDescribe());
             product.setTypeProduct(typeProductRepository.findById(dto.getIdTypeProduct()).orElse(null));
 
-            if (product.getTypeProduct() == null) {
+            if (ObjectUtils.isEmpty(product.getTypeProduct())) {
                 log.error("Failed to add product. TypeProduct is null");
                 messenger.setMessenger(ConstantsProduct.TYPE_NULL);
                 return new ResponseEntity<>(messenger, HttpStatus.BAD_REQUEST);
             }
-
             productRepository.save(product);
             log.info("Added new product: {}", product.getName());
             messenger.setMessenger(ConstantsProduct.ADD_PRODUCT_SUCCESS);
@@ -69,7 +66,6 @@ public class ProductImpl implements ProductService {
             messenger.setMessenger(ConstantsProduct.ERROR);
             return new ResponseEntity<>(messenger, HttpStatus.BAD_REQUEST);
         }
-
     }
 
     @Override
@@ -226,13 +222,13 @@ public class ProductImpl implements ProductService {
     }
 
     @Override
-    public ResponseEntity<?> delete(long id) {
+    public ResponseEntity<?> deleteProduct(long id) {
         try {
             if (productRepository.existsById(id)) {
                 productRepository.deleteById(id);
 
                 log.info("Deleted product successfully: {}", id);
-                messenger.setMessenger(ConstantsProduct.DELETE_PRODUCT_SUCCESS +id);
+                messenger.setMessenger(ConstantsProduct.DELETE_PRODUCT_SUCCESS + id);
 
                 return new ResponseEntity<>(messenger, HttpStatus.OK);
 
@@ -254,15 +250,15 @@ public class ProductImpl implements ProductService {
             StringBuilder message = new StringBuilder();
             for (Long id : ids) {
                 if (productRepository.existsById(id)) {
-                 //   productRepository.deleteById(id);
+                    //   productRepository.deleteById(id);
                     log.info("Deleted product successfully: {}", id);
-                 deleteMultipleProducts.add(ConstantsProduct.DELETE_PRODUCT_SUCCESS +id);
+                    deleteMultipleProducts.add(ConstantsProduct.DELETE_PRODUCT_SUCCESS + id);
                 } else {
                     log.error("Failed to delete product: Product with id {} not found", id);
-                    deleteMultipleProducts.add(ConstantsProduct.DELETE_PRODUCT_FAILSE_WRONG +id);
+                    deleteMultipleProducts.add(ConstantsProduct.DELETE_PRODUCT_FAILSE_WRONG + id);
                 }
             }
-            return new ResponseEntity<>( deleteMultipleProducts, HttpStatus.OK);
+            return new ResponseEntity<>(deleteMultipleProducts, HttpStatus.OK);
         } catch (Exception e) {
             log.error(ConstantsProduct.ERROR, e.getMessage());
             messenger.setMessenger(ConstantsProduct.ERROR);
@@ -272,10 +268,10 @@ public class ProductImpl implements ProductService {
     }
 
     @Override
-    public ResponseEntity<?> put(long id, ProductDto productDto) {
+    public ResponseEntity<?> putProduct(long id, ProductDto productDto) {
         try {
             Product product = productRepository.findById(id).orElse(null);
-            if (product == null) {
+            if (ObjectUtils.isEmpty(product)) {
                 log.error("Failed to update product: Product with id {} not found", id);
                 messenger.setMessenger(ConstantsProduct.TYPE_NULL);
                 return new ResponseEntity<>(messenger, HttpStatus.BAD_REQUEST);
@@ -285,12 +281,7 @@ public class ProductImpl implements ProductService {
             product.setPrice(productDto.getPrice());
             product.setQuantity(productDto.getQuantity());
             product.setDetailType(productDto.getDetailType());
-
-            List<Img> img = productDto.getImages();
-
-            //img.add()
-            product.setImages(img);
-
+            product.setImages(productDto.getImages());
             product.setDiscount(productDto.getDiscount());
             product.setDescribe(productDto.getDescribe());
             product.setTypeProduct(typeProductRepository.findById(productDto.getIdTypeProduct()).orElse(null));
@@ -303,7 +294,8 @@ public class ProductImpl implements ProductService {
             productRepository.save(product);
             log.info("Updated product successfully: {}", product.getName());
             messenger.setMessenger(ConstantsProduct.PUT_PRODUCT_SUCCESS);
-            return new ResponseEntity<>(product, HttpStatus.OK);
+            return new ResponseEntity<>(messenger, HttpStatus.OK);
+
         } catch (Exception e) {
             log.error("Error while updating product: {}", e.getMessage());
             messenger.setMessenger(ConstantsProduct.ERROR);

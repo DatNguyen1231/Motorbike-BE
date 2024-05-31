@@ -16,11 +16,11 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     List<Product> findByTypeProduct_NameTypeContainingIgnoreCase(String partialName);
 
     //search by idTypeProduct
-    @Query("SELECT p FROM Product p WHERE p.typeProduct.id = :id OR :id IS NULL")
-    Page<Product> findByTypeProduct_Id(@Param("id") Long id, Pageable pageable);
-
+    @Query("select p from Product p where p.typeProduct.id = ?1 ORDER BY p.id DESC")
+    Page<Product> findByTypeProduct_Id(Long id, Pageable pageable);
 
     //search by DetailType
+    @Query("select p from Product p where p.detailType = ?1 ORDER BY p.id DESC")
     Page<Product> findByDetailType(Long detailType, Pageable pageable);
 
     //Search by DetailsType high to low
@@ -39,11 +39,12 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     @Query("select p from Product p where p.typeProduct.id = ?1 ORDER BY p.price ASC")
     Page<Product> findByTypeProduct_IdOrderByPriceAsc(Long id, Pageable pageable);
 
-
-    @Query("SELECT p FROM Product p WHERE p.name LIKE %:name%")
+    @Query("SELECT p FROM Product p WHERE lower(p.name) LIKE lower(concat('%', ?1, '%'))")
     Page<Product> findByName(String name, Pageable pageable);
 
     @Query("select p from Product p where p.typeProduct.id = ?1or p.typeProduct.id = ?2")
     Page<Product> findByTypeProduct_IdAndTypeProduct_Id(Long id, @Nullable Long id1, Pageable pageable);
+
+
 
 }

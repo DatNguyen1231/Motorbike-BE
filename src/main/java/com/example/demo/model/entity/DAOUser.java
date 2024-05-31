@@ -20,6 +20,9 @@ public class DAOUser {
     @Column
     //  @JsonIgnore
     private String password;
+
+    //
+    private int status;
     //thong tin
     private String fullName;
     @Email(message = "{error.invalid_email}")

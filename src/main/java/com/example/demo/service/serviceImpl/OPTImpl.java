@@ -128,7 +128,6 @@ public class OPTImpl implements OTPService {
                 messenger.setMessenger(ConstantsOtp.EXPIRED_OTP);
                 return new ResponseEntity<>(messenger, HttpStatus.BAD_REQUEST);
             }
-
             // Tạo mật khẩu ngẫu nhiên
             final String passwordReset = PasswordGenerator.generatePassword(10);
             // Mã hóa và lưu mật khẩu mới

@@ -6,7 +6,7 @@ public class ConstantsUser {
     public static final String EMAIL_ALREADY_EXISTS = "Email đã tồn tại";
     public static final String INVALID_EMAIL = "Email không hợp lệ";
     public static final String PHONE_NUMBER_ALREADY_EXISTS = "Số điện thoại đã tồn tại";
-    public static final String PHONE_NUMBER_TEN_DIGITS = "Số điện thoại phải 10 số";
+    public static final String PHONE_NUMBER_TEN_DIGITS = "Số điện thoại phải 10 Số";
     public static final String USERNAME_SPECIAL_CHARACTERS = "Tên đăng nhập không được bắt đầu bằng ký tự đặc biệt hoặc số";
     public static final String USERNAME_ALREADY_EXISTS = "Tên đăng nhập đã tồn tại";
     public static final String USERNAME_PASSWORD_MIN_SIX_CHARACTERS = "Tài khoản hoặc mật khẩu phải ít nhất 6 kí tự";

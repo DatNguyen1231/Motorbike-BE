@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 
 public interface ProductService {
-    ResponseEntity<?> add(ProductDto dto);
+    ResponseEntity<?> addProduct(ProductDto dto);
 
     ResponseEntity<?> getByIdType(int page, int size, Long idType);
 
@@ -18,11 +18,11 @@ public interface ProductService {
 
     ResponseEntity<?> getByTypeProduct_IdArrange(int page, int size, Long typeProduct_Id, String arrange);
 
-    ResponseEntity<?> delete(long id);
+    ResponseEntity<?> deleteProduct(long id);
 
     ResponseEntity<?> deleteMultipleProducts(List<Long> ids);
 
-    ResponseEntity<?> put(long id, ProductDto productDto);
+    ResponseEntity<?> putProduct(long id, ProductDto productDto);
 
     ResponseEntity<?> findByNameProduct(int page, int size, String nameProduct);
 

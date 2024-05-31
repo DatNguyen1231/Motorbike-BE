@@ -21,7 +21,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.filter.CorsFilter;
 
 @Configuration
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter  {
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
 
@@ -35,6 +35,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter  {
         this.jwtUserDetailsService = jwtUserDetailsService;
         this.jwtRequestFilter = jwtRequestFilter;
     }
+
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
@@ -91,7 +92,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter  {
         // Add a filter to validate the tokens with every request
         httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
     }
-
 
 
 }

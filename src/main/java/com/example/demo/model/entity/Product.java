@@ -17,7 +17,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private float price;
+    private double price;
     private long quantity;
     private float Discount;
     //  1:Kawasaki2:Ducati 3:Honda4:Suziki    5:đầu nhớt  6:Phanh xe 7Gương 8Bánh xe
@@ -29,7 +29,7 @@ public class Product {
     @Column(name = "describe", columnDefinition = "TEXT")
     private String describe;
 
-    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "productMoto_id")
     private List<Img> images = new ArrayList<>();
 

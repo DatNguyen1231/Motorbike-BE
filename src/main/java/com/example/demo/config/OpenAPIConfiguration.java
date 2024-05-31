@@ -16,8 +16,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class OpenAPIConfiguration {
 
-    //@Value("${swagger-ui.server.url}")
-    private String url ="http://localhost:8080";
+    @Value("${swagger-ui.server.url}")
+    private String url;
 
     @Bean
     public OpenAPI customOpenAPI() {
