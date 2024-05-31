@@ -6,87 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="534f43b9-044d-4b4c-b196-932716482ed7" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DemoApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Initializer/Initializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Util/Calculate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Util/CheckEmptys.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Util/GetInfoUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Util/GmailService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Util/PasswordGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Util/SendSMS.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/config/CorsConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/config/EmailConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/config/JwtAuthenticationEntryPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/config/JwtRequestFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/config/JwtTokenUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/config/OpenAPIConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/config/WebSecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/constants/ConstantsOtp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/constants/ConstantsProduct.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/constants/ConstantsReview.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/constants/ConstantsShoppingCart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/constants/ConstantsUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controller/CustomerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controller/JwtAuthenticationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controller/OTPController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controller/ProductController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controller/ReviewsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controller/ShoppingCartController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controller/SmsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/CommentDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/JwtRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/JwtResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/Messenger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/ProductDetailDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/ProductDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/ProductSomePageResponseDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/ProductSomeReponseDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/RevenueStatisticsDTO$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/RevenueStatisticsDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/RevenueStatisticsDetailDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/ReviewsDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/ReviewsReturn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/ShoppingCartDetailDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/ShoppingCartDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/ShoppingCartDtoReturn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/UserDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/UserPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/UserRequestDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/sms$smsBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/Dto/sms.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/entity/DAOUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/entity/Img.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/entity/OTP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/entity/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/entity/Reviews.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/entity/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/entity/ShoppingCart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/entity/ShoppingCartDetail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/entity/TypeProduct.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/repositories/OTPRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/repositories/ProductRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/repositories/ReviewsRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/repositories/RoleRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/repositories/ShoppingCartDetailRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/repositories/ShoppingCartRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/repositories/StatusShoppingCartRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/repositories/TypeProductRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/repositories/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/service/CustomerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/service/OTPService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/service/ProductService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/service/ReviewsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/service/ShoppingCartService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/service/serviceImpl/CustomerImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/service/serviceImpl/JwtUserDetailsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/service/serviceImpl/MaintenanceTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/service/serviceImpl/OPTImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/service/serviceImpl/ProductImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/service/serviceImpl/ReviewsImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/service/serviceImpl/ShoppingCartImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -206,6 +126,11 @@
       <recent name="C:\Users\kcost\OneDrive\Máy tính\CGDN-SpringBoot-JWT-MySql-master\src\main\resources" />
       <recent name="C:\Users\kcost\OneDrive\Máy tính\CGDN-SpringBoot-JWT-MySql-master\src\main\resources\templates" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn --builder" />
+    </option>
   </component>
   <component name="RunManager" selected="Application.DemoApplication">
     <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
